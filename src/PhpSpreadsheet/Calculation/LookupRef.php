@@ -596,7 +596,7 @@ class LookupRef
         }
 
         $rowKeys = array_keys($arrayValues);
-        $columnKeys = @array_keys($arrayValues[$rowKeys[0]]);
+        $columnKeys = (array) @array_keys($arrayValues[$rowKeys[0]]);
 
         if ($columnNum > count($columnKeys)) {
             return Functions::VALUE();
